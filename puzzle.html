@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Puzzle For You</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+
+   <script>
+
+   function compute_A_multiple_B(a,b){
+     var z = 0;
+     a = parseInt(a);
+     b = parseInt(b);
+     z = a * b;
+     return z;
+   }
+
+   function ask_for_a_n_b() {
+     var a = prompt("what is your A?");
+     var b = prompt("what is your B?");
+     var z = compute_A_multiple_B(a,b);
+     var a = document.getElementById("demo");
+     a.style.fontSize = "45px";
+     a.style.color= "deepgrey";
+     document.getElementById("demo").innerHTML = "Your answer is " + z; 
+   }
+
+   function ask_ab(){
+     var a = document.getElementById("my form").element[0].value;
+     var b = document.getElementById("my form").element[1].value;
+     var z = compute_A_multiple_B(a,b);
+     var a = document.getElementById("demo");
+     a.style.fontSize = "45px";
+     a.style.color = "deepgrey";
+     document.getElementById("demo").innerHTML = "Your answer is" + z;
+   }
+
+
+   </script>
+
+    <!-- Header -->
+    <header class="masthead d-flex">
+      <div class="container text-center my-auto">
+        <h1 class="mb-1">Here is a puzzle for you!</h1>
+        <h3 class="mb-5">
+          <em>Start the game by clicking on the buttom below</em>
+        </h3>
+
+        <button type="button" class="btn btn-primary" onclick = "ask_for_a_n_b();">A + B = ?</button>
+
+        <p id="demo">
+
+      </div>
+      <div class="overlay"></div>
+    </header>
+
+
+    <!-- Services -->
+    <section class="content-section bg-primary text-white text-center" id="services">
+    </div>
+      <div class="container">
+        <div class="content-section-heading">
+          <h2 class="mb-5">Hope you enjoy the little game :)</h2>
+        </div>
+          </div>
+          <address>Made 18 October 2018<br>
+            by June Wu</address>
+        </div>
+      </div>
+    </section>
+
+  </body>
+
+</html>
